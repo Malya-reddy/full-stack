@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #cb85a0, #6ee8e4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background:rgb(215, 218, 218);
+      padding: 25px 35px;
+      border-radius: 15px;
+      box-shadow: 0px 8px 20px rgba(204, 77, 77, 0.2);
+      width: 700px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #2d3436;
+    }
+
+    /* Grid for label + input alignment */
+    .form-group {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      align-items: center;
+      gap: 10px;
+      padding-bottom:1rem;
+    }
+
+    label {
+      font-weight: bold;
+      color: #2d3436;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #dfe6e9;
+      border-radius: 6px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-color: #6c5ce7;
+      box-shadow: 0px 0px 6px rgba(108, 92, 231, 0.5);
+    }
+
+    /* Gender options side by side */
+    .gender {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    /* Hobbies grid with small gaps */
+    .hobbies {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px 10px;
+    }
+
+    .hobbies label,
+    .gender label {
+      font-weight: normal;
+      color: #2d3436;
+    }
+
+    /* Button styling */
+   button {
+  width: 100%; /* makes button full width */
+  padding: 12px 0; /* vertical padding only, spans full width */
+  background: linear-gradient(135deg, #6c5ce7, #00cec9);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px; /* optional smaller radius for full width */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: block;
+  margin: 15px 0 0 0; /* only vertical spacing */
+}
+
+button:hover {
+  background: linear-gradient(135deg, #00cec9, #6c5ce7);
+  transform: scale(1.02); /* slightly smaller scale to fit full width */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Register</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your Email">
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <div class="gender">
+          <label><input type="radio" name="gender" value="male"> Male</label>
+          <label><input type="radio" name="gender" value="female"> Female</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Hobbies</label>
+        <div class="hobbies">
+          <label><input type="checkbox" name="hobbies" value="singing"> Singing</label>
+          <label><input type="checkbox" name="hobbies" value="reading"> Reading</label>
+          <label><input type="checkbox" name="hobbies" value="development"> Development</label>
+          <label><input type="checkbox" name="hobbies" value="browsing"> Browsing Internet</label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="*******" required>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+</body>
+</html>

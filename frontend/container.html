@@ -1,113 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Professional Summary & Projects</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #0eaaa5;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            max-width: 500px;
-            margin: 40px auto;
-            background: #38cd76;
-            padding: 32px;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
-        .container {
-          text-align: center;
-        }
-        .summary {
-            margin-bottom: 32px;
-            padding-bottom: 16px;
-            border-bottom: 1px solid #ca8585;
-            text-align: center;
-        }
-        .summary h2 {
-            margin-top: 0;
-            color: #333;
-            text-align: center;
-        }
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2px;
-            background-color: aqua;
-        }
-        .card {
-            background: #d9b7b7;
-            border-radius: 6px;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-            padding: 20px;
-            flex: 1 1 160px;
-            min-width: 10px;
-            max-width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content:space-between;
-            cursor: pointer;
-        }
-        .card h3 {
-            margin-top: 0;
-            color: #1976d2;
-            text-align: center;
-        }
-        .card p {
-            margin-bottom: 0;
-            color: #060606;
-            text-align: center;
-        }
-        @media (max-width: 700px) {
-            .cards {
-                flex-direction: column;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Professional Summary & Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0f24; /* dark background for contrast */
+      margin: 0;
+      padding: 0;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #1f2d45;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Section headings */
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      text-align: center;
+      color: #00cfff;
+    }
+
+    /* Professional summary */
+    .summary {
+      margin-bottom: 40px;
+      border-bottom: 2px solid #00cfff33;
+      padding-bottom: 20px;
+    }
+
+    .summary p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #eaeaea;
+      text-align: center;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    /* Project cards grid */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #2a3b5f;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 6px 18px rgba(0, 195, 255, 0.3);
+    }
+
+    .card h3 {
+      margin: 0 0 10px 0;
+      color: #00cfff;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: #dcdcdc;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+
+    /* Footer signature */
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    .footer span {
+      color: #00cfff;
+      font-weight: bold;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="summary">
-            <h2>Professional Summary</h2>
-            <p>
-                Experienced web development and passinate about ai&ml .
-            </p>
-        </div>
-        <div>
-            <h2>Projects</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Project Management Dashboard</h3>
-                    <p>
-                        Developed a responsive dashboard for tracking project 
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>E-commerce Platform</h3>
-                    <p>
-                        Built a e-commerce website 
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>Portfolio Website</h3>
-                    <p>
-                        Designed a website which is same as resume
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>Portfolio Website</h3>
-                    <p>
-                        Designed a website which is same as resume
-                    </p>
-                </div>
-            </div>
-        </div>
+
+  <div class="container">
+    <!-- Professional Summary -->
+    <div class="summary">
+      <h2>Professional Summary</h2>
+      <p>
+        Experienced in web development and passionate about AI & ML.
+        Skilled at building responsive and user-friendly websites,
+        with a focus on clean design and modern technologies.
+      </p>
     </div>
-    <span>Vibe Coder</span>
+
+    <!-- Projects -->
+    <div class="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Project Management Dashboard</h3>
+          <p>Developed a responsive dashboard for tracking project progress and team collaboration.</p>
+        </div>
+        <div class="card">
+          <h3>E-commerce Platform</h3>
+          <p>Built a scalable e-commerce website with secure checkout and responsive design.</p>
+        </div>
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <p>Designed a personal portfolio site to showcase projects and skills with modern UI.</p>
+        </div>
+        <div class="card">
+          <h3>Weather App</h3>
+          <p>Created a weather forecasting app that uses live API data with location-based search.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer signature -->
+  <div class="footer">
+    <p>&copy; 2025 <span>Vibe Coder</span>. All rights reserved.</p>
+  </div>
+
 </body>
 </html>
-
